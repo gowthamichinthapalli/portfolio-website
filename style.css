@@ -20,6 +20,8 @@ body{
     font-family:'poppins' , sans-serif;
     background-color: var(--background-color);
     margin:0 auto;
+    width: 100%;
+max-width: 1200px;
 }
 
 a{
@@ -241,7 +243,7 @@ margin:20px;
     }
 }
 
-@media(max-width:740px){
+@media(max-width:768px){
      .hero {
         flex-direction:column-reverse;
      }
