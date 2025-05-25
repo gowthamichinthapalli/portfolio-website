@@ -1,0 +1,343 @@
+:root{
+    --text-color:black;
+   --link-color:blue;
+   --background-color: white;
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family:'poppins' , sans-serif;
+    background-color: var(--background-color);
+    max: width 1400px;
+    margin:0 auto;
+}
+
+a{
+    color:var(--link-color);
+    text-decoration: none;
+}
+
+/* NAVBAR */
+
+nav{
+    display: flex;
+   justify-content:space-between;
+   padding:0 50px;
+   height:80px;
+   align-items: center;
+position: sticky;
+
+}
+
+nav .left a{
+    color:black;
+font-size:25px;
+font-weight:600;
+}
+
+
+nav .right a{
+    color:var(--text-color);
+    margin:0 10px;
+}
+
+nav .right a:last-child {
+  color: var(--background-color);
+  background-color: var(--text-color);
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+nav .right a:hover{
+    color:var(--background-color);
+    background-color:var(--text-color) ;
+    padding:5px 15px; 
+}
+
+nav .right a span{
+margin-left:5px;
+}
+
+/* section-1 HERO */
+
+.hero{
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+    padding:0 50px;
+    margin:50px 0;
+    margin-bottom:100ox;
+   gap:40px;
+}
+
+.hero .text{
+    flex:5;
+}
+
+.hero .text h2{
+    font-size:50px;
+}
+
+.hero .text .links{
+    margin-top:25px;
+}
+
+.hero .text .links a{
+    color:black;
+    font-weight :5px;
+    display: inline-block;
+    padding:5px 10px;
+    border: 2px solid black;
+    border-radius:5px;
+    margin-right:10px;
+    margin-bottom:10px;
+    transition:1s;
+}
+.hero .text .links a:hover{
+   color:white;
+   background-color: black;
+    border:2px solid white;
+
+}
+
+.hero .headshot{
+    flex:2;
+    display:flex;
+    justify-content:right;
+}
+
+.hero .headshot img{
+    /* border-radius:50%; */
+}
+
+
+/* SECTION-2 SKILLS */
+
+
+.skills {
+    padding:0 50px;
+    margin-bottom:100px;
+}
+
+.skills h2{
+    text-align:center;
+    font-size: 50px;
+}
+
+.skills .text{
+    text-align:center;
+    font-size: 18px;
+    
+}
+
+.skills .cells{
+  
+    display:flex;
+justify-content: center;
+flex-wrap: wrap;    
+}
+
+
+.skills .cells .cell{
+  
+display:flex;
+justify-content: center;
+align-items:center;
+width:180px;
+height:60px;
+padding:10px 10px;
+border: 1px solid rgb(187, 179, 179);
+border-radius:5px;
+margin:20px;
+    
+}
+
+.skills .cells .cell img{
+    width:30px;
+    height:30px;
+    object-fit:contain;
+    border-radius:2px;
+
+}
+
+.skills .cells .cell span{
+    font-size:18px;
+}
+
+.skills .cells .cell:nth-child(5)
+{
+   padding:10px 5px;
+}
+
+.skills .cells .cell:nth-child(2) img{
+    
+   height:60px;
+
+}
+
+.skills .cells .cell:nth-child(5) img{
+    
+   height:50px;
+   width:60px;
+
+}
+
+
+/* testimony */
+
+.testimony {
+    padding:0 50px;
+    margin-bottom:100px;
+}
+
+.testimony h2{
+    text-align:center;
+    font-size: 50px;
+}
+
+.testimony .text{
+    text-align:center;
+    font-size: 18px;
+    
+}
+
+.testimony .cells{
+display:flex;
+justify-content: center;
+flex-wrap: wrap;  
+}
+
+.testimony .cells img{
+  
+height:300px;
+width:250px;
+border-radius: 10px;
+/* background-color: rgb(177, 171, 171); */
+
+
+display:flex;
+justify-content: center;
+align-items:center;
+padding:10px 10px;
+border: 1px solid rgb(22, 22, 22);
+border-radius:5px;
+margin:20px;
+}
+
+
+@media(max-width:850px){
+    .hero .text h2{
+        font-size:35px;
+    }
+}
+
+@media(max-width:740px){
+     .hero {
+        flex-direction:column-reverse;
+     }
+
+     .hero .headshot img{
+width:300px;
+     }
+}
+
+@media(max-width:600px)
+{
+    nav{
+        padding:0 20px;
+
+    }
+
+    nav .right a {
+        font-size:22px;
+    }
+
+    nav .right a:last-child {
+      background-color:transparent ;
+      color:black;
+      padding : 0;
+    }
+    nav .right a span{
+        display:none;
+
+    }
+
+
+    /* 
+    hero-section-1
+    */.hero{
+        padding: 0 20px;
+       
+    }
+    .hero .text h2{
+        font-size:25px;
+      
+    }
+
+    /* section-2 skills */
+
+    .skills .cells .cell{
+        font-size:16px;
+    }
+
+}
+
+/* section-contact */
+
+.contact{
+    padding:0 20px;
+    margin-bottom: 100px;
+}
+
+.contact h2{
+    font-size: 35px;
+}
+
+.contact .group{
+    display:flex;
+    gap:50px;
+}
+
+.contact .group .text{
+padding:25px;
+    flex:3;
+}
+
+.contact .group form{
+    flex:2;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .group form input,
+.contact .group form textarea{
+    font-family: poppins, sans-serif;
+    border:2px solid rgb(13, 13, 13);
+    padding:10px;
+    margin-bottom: 15px;
+    outline:none;
+    resize: none;
+}
+
+.contact .group form button{
+      font-family: poppins, sans-serif;
+      font-size:16px;
+      background-color: black;
+     color:white;
+     border-radius: 5px;
+     height:50px;
+
+}
+
